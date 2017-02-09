@@ -46,6 +46,8 @@ class Config extends \Nethgui\Controller\AbstractController
         $this->declareParameter('DiskCacheSize', Validate::NONNEGATIVE_INTEGER, array('configuration', 'squid', 'DiskCacheSize'));
         $this->declareParameter('MinObjSize', Validate::NONNEGATIVE_INTEGER, array('configuration', 'squid', 'MinObjSize'));
         $this->declareParameter('MaxObjSize', Validate::NONNEGATIVE_INTEGER, array('configuration', 'squid', 'MaxObjSize'));
+        $this->declareParameter('URLRewriteConfig', Validate::ANYTHING, array('configuration', 'squid', 'URLRewriteConfig'));
+        $this->declareParameter('ICAPServerConfig', Validate::ANYTHING, array('configuration', 'squid', 'ICAPServerConfig'));
     }
 
     public function process()
