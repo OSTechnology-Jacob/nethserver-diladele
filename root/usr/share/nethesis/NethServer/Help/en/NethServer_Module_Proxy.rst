@@ -31,56 +31,6 @@ Block HTTP and HTTPS ports
     If enabled, clients will not be able to bypass the proxy.
     External sites on ports 80 and 443 will be reachable only using the proxy.
 
-Parent proxy
-    Enter the IP address and port of the parent proxy. The correct syntax is
-    IP_Address:port.
-    *DO NOT* enter the IP address of this server.
-
-Hosts without proxy
-===================
-
-List of internal hosts allowed to bypass the transparent proxy and access
-Internet without being filtered.
-
-Name
-    A unique name for the bypass rule.
-
-Enabled
-    Enable or disable the bypass rule.
-
-Host
-    Select a host between local machines and firewall objects.
-
-Description
-    Custom description (optional).
-
-Sites without proxy
-===================
-
-List of remote hosts that need to be accessed directly.
-It's useful for badly written sites which don't work through a proxy.
-
-Name
-    A unique name for the bypass rule.
-
-Enabled
-    Enable or disable the bypass rule.
-
-Host
-    Select a host between remote hosts and firewall objects.
-
-Description
-    Custom description (optional).
-
 Cache
 =====
-Cache configuration of squid (enabled o disabled) by setting these parameters:
-
-Disk cache size
-    Set (in MB) the size of cache
-
-Min object size
-    Set (in kB) the minimum size of cache object.
-
-Max object size
-    Set (in kB) the maximum size of cache object.
+Option to clear Squid disk cache and SSLDB
