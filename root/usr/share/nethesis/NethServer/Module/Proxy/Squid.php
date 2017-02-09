@@ -42,7 +42,6 @@ class Squid extends \Nethgui\Controller\AbstractController
         $this->declareParameter('status', Validate::SERVICESTATUS, array('configuration', 'squid', 'status'));
         $this->declareParameter('GreenMode', $this->createValidator()->memberOf($this->modes), array('configuration', 'squid', 'GreenMode'));
         $this->declareParameter('BlueMode', $this->createValidator()->memberOf($this->modes), array('configuration', 'squid', 'BlueMode'));
-        $this->declareParameter('ParentProxy', Validate::IPv4_OR_EMPTY, array('configuration', 'squid', 'ParentProxy'));
         $this->declareParameter('PortBlock', Validate::SERVICESTATUS, array('configuration', 'squid', 'PortBlock'));
     }
 
