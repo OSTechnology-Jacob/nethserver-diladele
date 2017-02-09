@@ -1,5 +1,5 @@
-Summary: NethServer squid configuration
-Name: nethserver-squid
+Summary: NethServer Diladele package
+Name: nethserver-diladele
 Version: 1.5.2
 Release: 1%{?dist}
 License: GPL
@@ -15,7 +15,7 @@ BuildRequires: perl
 BuildRequires: nethserver-devtools 
 
 %description
-NethServer squid configuration
+NethServer Diladele Web Content Filtering
 
 %prep
 %setup
