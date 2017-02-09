@@ -4,28 +4,7 @@ nethserver-diladele
 
 This package configures NethServer to use qlproxy/diladele as an ICAP web content filter for Squid.
 Squid rpms are from upstream.
-
-Configuration
-=============
-
-All properties are saved in the ``squid`` key under the ``configuration`` database.
-
-Properties:
-
-* *BlueMode*: change Squid operation mode on blue networks. It has same values and defaults of ``GreenMode``
-* *DiskCache*: disabled by default, if enabled it actives the disk caching system for squid
-* *DiskCacheSize*: maximum value of squid cache on disk
-* *GreenMode*: change Squid operation mode on green networks.
-  Can be: ``manual``, ``authenticated``, ``transparent``, ``transparent_ssl``. Default is: ``manual``
-* *KrbPrimaryList*: name for Kerberos keytab (used for Active Directory integration)
-* *KrbStatus*:  if set to enabled a ticket credential cache file is kept valid by the hourly cron job (used for Active Directory integration)
-* *MaxObjSize*: objects larger than this setting will not be saved on disk. If speed is more desirable than saving bandwidth, this should be set to a low value
-* *MemCacheSize*: value of squid cache on memory
-* *MinObjSize*: can be left at 0 to cache everything, but may be raised if small objects are not desired in the cache.
-* *NoCache*: comma separated list of domains which will be not cached
-* *ParentProxy*: in the form host:port, if omitted port is default to 3128. Default is empty
-* *PortBlock*: if enabled, block port 80 and 443. Default is: ``disabled`` 
-* *SafePorts*: comma separated list of ports thath can be accessed through the proxy. Listed ports will be added to the default list of safe and ssl ports
+It is based on NethServer-Squid with a large amount of fat trimmed.
 
 Database example
 ----------------
