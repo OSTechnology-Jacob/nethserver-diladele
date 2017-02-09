@@ -1,0 +1,4 @@
+##
+# 50 Include /opt/qlproxy/etc/squid/squid.conf - Allow QLProxy to configure and manage Squid.
+##
+include "/opt/qlproxy/etc/squid/squid.conf"
