@@ -29,7 +29,7 @@ fi
 rm -Rf /var/lib/ssl_db
 
 # Reinitialize ssl_db
-/usr/lib64/squid/ssl_crtd -c -s /var/lib/ssl_db
+/usr/lib64/squid/ssl_crtd -c -s /var/spool/squid_ssldb
 
 # Remove old squid cache
 rm -Rf /var/spool/squid
