@@ -20,7 +20,4 @@ echo $view->fieldsetSwitch('status', 'enabled',  $view::FIELDSETSWITCH_CHECKBOX)
         ->insert($blue_modes)
         ->insert($view->checkbox('PortBlock', 'enabled')->setAttribute('uncheckedValue', 'disabled'));
 
-echo $view->fieldset('', $view::FIELDSET_EXPANDABLE)->setAttribute('template', $T('ProxyAdvanced_label'))
-    ->insert($view->textInput('ParentProxy')->setAttribute('placeholder','192.168.0.1:8080'));
-
 echo $view->buttonList($view::BUTTON_SUBMIT | $view::BUTTON_HELP);
