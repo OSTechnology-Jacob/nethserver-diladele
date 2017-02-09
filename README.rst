@@ -1,9 +1,8 @@
 ================
-nethserver-squid
+nethserver-diladele
 ================
 
-This package configure the well-known Squid web proxy.
-
+This package configures NethServer to use qlproxy/diladele as an ICAP web content filter for Squid.
 Squid rpms are from upstream.
 
 Configuration
@@ -100,14 +99,6 @@ Properties:
 * *status*: can be ``enabled`` or ``disabled``
 * *Description*: optional description
 
-
-Bypass example: ::
-
- boss=bypass-src
-    Description=Boss without proxy
-    Host=host;bosspc
-    status=enabled
-
 Cache
 =====
 There is an *event* called ``nethserver-squid-clear-cache`` that empties the cache.
@@ -127,11 +118,3 @@ The WPAD returns:
   network where the proxy is configured in manual or authenticated mode
 
 Also WPAD file includes all source and destination bypasses.
-
-Miscellaneous options
-=====================
-
-The following options are always enabled:
-
-* buffered logs
-* SNMP support on port 3401
