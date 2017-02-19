@@ -35,8 +35,6 @@ event_actions($event, qw(
    nethserver-squid-check-cache 30
 ));
 
-templates2events("/etc/squid/squid.conf",  $event);
-templates2events("/etc/squid/acls/no_cache.acl",  $event);
 templates2events("/etc/dnsmasq.conf",  $event);
 templates2events("/etc/hosts",  $event);
 templates2events("/var/www/html/wpad.dat",  $event);
@@ -57,8 +55,6 @@ event_actions($event, qw(
    firewall-adjust 30
 ));
 
-templates2events("/etc/squid/squid.conf",  $event);
-templates2events("/etc/squid/acls/no_cache.acl",  $event);
 templates2events("/etc/dnsmasq.conf",  $event);
 templates2events("/etc/hosts",  $event);
 templates2events("/var/www/html/wpad.dat",  $event);
@@ -81,7 +77,6 @@ event_actions($event, qw(
 #--------------------------------------------------
 my $event = "interface-update";
 
-templates2events("/etc/squid/squid.conf",  $event);
 templates2events("/etc/httpd/conf.d/wpad.conf",  $event);
 event_services($event, 'squid' => 'restart');
 event_actions($event, "nethserver-squid-httpd-reload", 20);
@@ -95,7 +90,6 @@ foreach (qw(
     nethserver-samba-adsjoin
 )) {
     event_templates($_, qw(
-        /etc/squid/squid.conf
         /etc/sysconfig/squid
     ));
     event_services($_, qw(
@@ -132,6 +126,5 @@ foreach (qw(
 # Expand squid and restart when a global http/https proxy is configured
 #----------------------------------------------------------------------
 
-templates2events("/etc/squid/squid.conf","proxy-modify");
 event_services("proxy-modify", 'squid' => 'restart');
 
