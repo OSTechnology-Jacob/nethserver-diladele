@@ -1,5 +1,6 @@
 <?php
 
+echo '<br/><a href="/diladele" target="_blank" >Open Diladele management</a>';
 
 echo $view->fieldsetSwitch('status', 'enabled',  $view::FIELDSETSWITCH_CHECKBOX)
         ->setAttribute('template', $T('Squid_status'))
