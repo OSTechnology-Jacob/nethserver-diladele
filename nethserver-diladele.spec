@@ -11,6 +11,8 @@ Requires: nethserver-firewall-base, nethserver-httpd
 Requires: squid >= 3.5.20
 Requires: nethserver-sssd
 Requires: qlproxy
+Requires: python-devel python-pip python-ldap net-tools libjpeg-devel zlib-devel gcc-c++
+Requires: httpd mod_wsgi krb5-workstation mc
 
 BuildRequires: perl
 BuildRequires: nethserver-devtools 
